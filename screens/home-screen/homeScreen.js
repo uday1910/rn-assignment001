@@ -14,19 +14,19 @@ const HomeScreen = (props) => {
     const deviceCheck = NativeModules.CheckSimulator;
 
     checkDevice = useCallback(() => {
-        //if (IS_IOS) {
-        deviceCheck.checkForDeviceOrSimulator((isDevice) => {
-            console.log('Received Flag value', isDevice);
-            setDevice(isDevice)
-            if (isDevice === 'true') {
-                Alert.alert('This application is runnng on actual device.')
-            } else if (isDevice === 'false') {
-                Alert.alert('This application is runnng on simulator / emulator.')
-            } else {
-                Alert.alert('Received value', isDevice)
-            }
-        });
-        //}
+        if (IS_IOS) {
+            deviceCheck.checkForDeviceOrSimulator((isDevice) => {
+                console.log('Received Flag value', isDevice);
+                setDevice(isDevice)
+                if (isDevice === 'true') {
+                    Alert.alert('This application is runnng on actual device.')
+                } else if (isDevice === 'false') {
+                    Alert.alert('This application is runnng on simulator / emulator.')
+                } else {
+                    Alert.alert('Received value', isDevice)
+                }
+            });
+        }
     }, [deviceCheck]);
 
     useEffect(() => {
