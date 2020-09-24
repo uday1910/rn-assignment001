@@ -20,8 +20,10 @@ const HomeScreen = (props) => {
             setDevice(isDevice)
             if (isDevice === 'true') {
                 Alert.alert('This application is runnng on actual device.')
-            } else {
+            } else if (isDevice === 'false') {
                 Alert.alert('This application is runnng on simulator / emulator.')
+            } else {
+                Alert.alert('Received value', isDevice)
             }
         });
         //}
