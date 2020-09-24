@@ -16,17 +16,17 @@ const OptionsScreen = (props) => {
     };
 
     const onCheckRunningDevice = () => {
-        if (IS_IOS) {
-            const deviceCheck = NativeModules.CheckSimulator;
-            deviceCheck.checkForDeviceOrSimulator((isDevice) => {
-                console.log('Received Flag value', isDevice);
-                if (isDevice === 'true') {
-                    Alert.alert('This application is runnng on actual device.')
-                } else {
-                    Alert.alert('This application is runnng on simulator / emulator.')
-                }
-            });
-        }
+        // if (IS_IOS) {
+        const deviceCheck = NativeModules.CheckSimulator;
+        deviceCheck.checkForDeviceOrSimulator((isDevice) => {
+            console.log('Received Flag value', isDevice);
+            if (isDevice === 'true') {
+                Alert.alert('This application is runnng on actual device.')
+            } else {
+                Alert.alert('This application is runnng on simulator / emulator.')
+            }
+        });
+        // }
     };
 
     return (
