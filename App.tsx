@@ -20,11 +20,7 @@ import nameReducers from './store/Reducers/NameReducer';
 
 import MainNavigation from './navigation/MainNavigation';
 
-const rootReducer = combineReducers({
-  name: nameReducers
-});
-
-const store = createStore(rootReducer);
+import store from './store/store';
 
 enableScreens();
 
