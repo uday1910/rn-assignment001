@@ -20,6 +20,7 @@ exports[`InputText Function InputText render properly according to the snapshot 
       "width": "85%",
     }
   }
+  testID="input-text"
   underlineColorAndroid="transparent"
   value=""
 />

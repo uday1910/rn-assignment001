@@ -32,10 +32,11 @@ const VariationButton: React.FC<Props> = (props) => {
 
   return (
     <TouchableButton
+      testID="variation-button"
       onPress={props.onPressButton}
       style={{...props.buttonStyle, ...styles.defaultContainer}}
       activeOpacity={props.activeOpacity}>
-      <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+      <View style={styles.textContainer}>
         <Text style={props.buttonTextStyle}>{props.buttonTitle}</Text>
       </View>
     </TouchableButton>

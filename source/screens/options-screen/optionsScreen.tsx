@@ -36,7 +36,7 @@ const OptionsScreen: React.FC<Props> = (props) => {
   return (
     <View style={styles.screenLayout}>
       <View style={styles.textContainer}>
-        <Text style={styles.text} numberOfLines={0}>
+        <Text testID="welcome-text" style={styles.text} numberOfLines={0}>
           Welcome, {userName}
         </Text>
       </View>

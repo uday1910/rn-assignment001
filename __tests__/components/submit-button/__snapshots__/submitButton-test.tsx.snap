@@ -17,6 +17,7 @@ exports[`SubmitButton Function SubmitButton render properly according to the sna
       "width": "85%",
     }
   }
+  testID="submit-button"
 >
   <View
     style={

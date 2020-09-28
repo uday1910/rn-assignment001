@@ -1,5 +1,5 @@
 import {createStore, combineReducers} from 'redux';
-import nameReducers from './Reducers/NameReducer';
+import nameReducers from './reducers/NameReducer';
 
 const rootReducer = combineReducers({
   name: nameReducers,

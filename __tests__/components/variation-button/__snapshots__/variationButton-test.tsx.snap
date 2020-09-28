@@ -22,6 +22,7 @@ exports[`VariationButton Function VariationButton render properly according to t
       "width": "85%",
     }
   }
+  testID="variation-button"
 >
   <View
     style={

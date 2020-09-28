@@ -17,13 +17,13 @@ import {Provider} from 'react-redux';
 
 import MainNavigation from './source/navigation/MainNavigation';
 
-import store from './source/store/store';
+import configureStore from './source/store/store';
 
 enableScreens();
 
 const App = () => {
   return (
-    <Provider store={store}>
+    <Provider store={configureStore}>
       <NavigationContainer>
         <MainNavigation />
       </NavigationContainer>

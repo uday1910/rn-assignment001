@@ -21,6 +21,7 @@ const InputText: React.FC<Props> = (props) => {
 
   return (
     <TextInput
+      testID="input-text"
       value={enteredValue}
       placeholder={props.placeholder}
       style={{...styles.input, ...props.style}}

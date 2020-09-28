@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTodo component test InputText render properly according to the snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "padding": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#404040",
+          "fontSize": 22,
+          "fontWeight": "bold",
+          "marginHorizontal": 20,
+          "marginVertical": 10,
+        }
+      }
+    >
+      Welcome!!
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "flex-start",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      autoCorrect={false}
+      maxLength={20}
+      onChangeText={[Function]}
+      placeholder="Please Enter Your Name"
+      placeholderTextColor="#a0a0a0"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderBottomColor": "#a0a0a0",
+          "borderBottomWidth": 0.5,
+          "color": "#404040",
+          "fontSize": 18,
+          "marginBottom": 10,
+          "padding": 10,
+          "width": "85%",
+        }
+      }
+      testID="input-text"
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+          "width": "85%",
+        }
+      }
+      testID="submit-button"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "elevation": 4,
+              "shadowColor": "#404040",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 10,
+            },
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#3498DB",
+              "borderRadius": 10,
+              "height": 50,
+              "justifyContent": "center",
+              "marginVertical": 10,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          CONTINUE
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

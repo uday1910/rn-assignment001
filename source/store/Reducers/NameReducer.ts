@@ -1,4 +1,4 @@
-import {SAVE_NAME, REMOVE_NAME, Action} from '../Actions/NameAction';
+import {SAVE_NAME, REMOVE_NAME, Action} from '../actions/NameAction';
 
 interface NameState {
   userName: string;

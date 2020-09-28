@@ -3,7 +3,7 @@ import {View, Text, Alert} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {StackNavigationProp} from '@react-navigation/stack';
 
-import {saveName, removeName} from '../../store/Actions/NameAction';
+import {saveName, removeName} from '../../store/actions/NameAction';
 import {checkForDeviceOrSimulator} from '../../utility/methods';
 import InputText from '../../components/input-text/inputText';
 import SubmitButton from '../../components/submit-button/submitButton';
