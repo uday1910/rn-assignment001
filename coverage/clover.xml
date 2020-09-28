@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1601314887669" clover="3.2.0">
-  <project timestamp="1601314887670" name="All files">
+<coverage generated="1601317759312" clover="3.2.0">
+  <project timestamp="1601317759313" name="All files">
     <metrics statements="82" coveredstatements="49" conditionals="24" coveredconditionals="8" methods="19" coveredmethods="8" elements="125" coveredelements="65" complexity="0" loc="82" ncloc="82" packages="10" files="16" classes="16"/>
     <package name="components.input-text">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -39,12 +39,12 @@
       <file name="variationButton.tsx" path="/Users/urjapatel/Desktop/rn-assignment001/source/components/variation-button/variationButton.tsx">
         <metrics statements="7" coveredstatements="6" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
         <line num="22" count="1" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="25" count="2" type="cond" truecount="3" falsecount="1"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="29" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="25" count="3" type="cond" truecount="3" falsecount="1"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="29" count="3" type="cond" truecount="3" falsecount="1"/>
         <line num="30" count="0" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
       </file>
     </package>
     <package name="constants">

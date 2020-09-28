@@ -37,4 +37,10 @@ describe('VariationButton Function', () => {
     const button = await getByTestId('variation-button');
     expect(button).toBeDefined();
   });
+
+  it('should have a button title', async () => {
+    const {findByText} = render(<VariationButton {...props} />);
+    const title = await findByText('Button');
+    expect(title).toBeDefined();
+  });
 });
