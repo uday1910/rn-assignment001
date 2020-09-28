@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/variation-button/variationButton.tsx</title>
+    <title>Code coverage report for screens/options-screen/optionsScreen.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/variation-button</a> variationButton.tsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">screens/options-screen</a> optionsScreen.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.71% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/7</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>8/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.71% </span>
+                <span class="strong">50% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>2/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">77.78% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/7</span>
+                <span class='fraction'>7/9</span>
             </div>
         
             
@@ -103,7 +103,20 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -127,8 +140,11 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
@@ -149,52 +165,75 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import {
-  TouchableOpacity,
-  TouchableNativeFeedback,
-  View,
-  Text,
-} from 'react-native';
-import Ripple from 'react-native-material-ripple';
+import {View, Text} from 'react-native';
+import {useSelector} from 'react-redux';
+import {StackNavigationProp} from '@react-navigation/stack';
 &nbsp;
-import {IS_ANDROID, IS_IOS} from '../../constants/constant';
+import {checkForDeviceOrSimulator} from '../../utility/methods';
+&nbsp;
+import SubmitButton from '../../components/submit-button/submitButton';
 import styles from './styles';
 &nbsp;
-export interface Props {
-  addRippleEffect?: boolean;
-  buttonStyle: object;
-  activeOpacity?: number;
-  buttonTextStyle: object;
-  buttonTitle: string;
-  onPressButton: () =&gt; void;
+type ScreenNavigationProp = StackNavigationProp&lt;any&gt;;
+&nbsp;
+type Props = {
+  navigation: ScreenNavigationProp;
+};
+&nbsp;
+interface RootState {
+  name: any;
+  userName: string;
 }
 &nbsp;
-const VariationButton: React.FC&lt;Props&gt; = (props) =&gt; {
-  let TouchableButton: any = TouchableOpacity;
+const OptionsScreen: React.FC&lt;Props&gt; = (props) =&gt; {
+  const {navigation} = props;
 &nbsp;
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (props.addRippleEffect &amp;&amp; IS_IOS) {
-    TouchableButton = Ripple;
-  }
+  const selectUserName = (state: RootState) =&gt; state.name.userName;
+  const userName = useSelector(selectUserName);
 &nbsp;
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (props.addRippleEffect &amp;&amp; IS_ANDROID) {
-<span class="cstat-no" title="statement not covered" >    TouchableButton = TouchableNativeFeedback;</span>
-  }
+  const onButtonVariationHanlder = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    navigation.navigate('Button Variations');</span>
+  };
+&nbsp;
+  const onCheckRunningDevice = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    checkForDeviceOrSimulator();</span>
+  };
 &nbsp;
   return (
-    &lt;TouchableButton
-      testID="variation-button"
-      onPress={props.onPressButton}
-      style={{...props.buttonStyle, ...styles.defaultContainer}}
-      activeOpacity={props.activeOpacity}&gt;
+    &lt;View style={styles.screenLayout}&gt;
       &lt;View style={styles.textContainer}&gt;
-        &lt;Text style={props.buttonTextStyle}&gt;{props.buttonTitle}&lt;/Text&gt;
+        &lt;Text testID="welcome-text" style={styles.text} numberOfLines={0}&gt;
+          Welcome, {userName}
+        &lt;/Text&gt;
       &lt;/View&gt;
-    &lt;/TouchableButton&gt;
+      &lt;View style={styles.buttonContainer}&gt;
+        &lt;SubmitButton
+          style={styles.buttonStyle}
+          buttonTitle="GO TO BUTTON VARIATION"
+          onPressButton={onButtonVariationHanlder}
+        /&gt;
+        &lt;SubmitButton
+          style={styles.buttonStyle}
+          buttonTitle="CHECK RUNNING DEVICE"
+          onPressButton={onCheckRunningDevice}
+        /&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
   );
 };
 &nbsp;
-export default VariationButton;
+export default OptionsScreen;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
