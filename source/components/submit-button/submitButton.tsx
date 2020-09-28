@@ -11,7 +11,9 @@ export interface Props {
 
 const SubmitButton: React.FC<Props> = (props) => {
   return (
-    <TouchableOpacity onPress={props.onPressButton} style={{width: '85%'}}>
+    <TouchableOpacity
+      onPress={props.onPressButton}
+      style={styles.mainContainer}>
       <View style={[props.style, styles.buttonContainer]}>
         <Text style={styles.buttonTextStyle}>{props.buttonTitle}</Text>
       </View>

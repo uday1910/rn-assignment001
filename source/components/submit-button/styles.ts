@@ -2,6 +2,9 @@ import {StyleSheet} from 'react-native';
 import Colors from '../../constants/colors';
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    width: '85%',
+  },
   buttonContainer: {
     backgroundColor: Colors.blue,
     marginVertical: 10,
