@@ -10,14 +10,14 @@
 
 import 'react-native-gesture-handler';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { enableScreens } from 'react-native-screens';
+import {NavigationContainer} from '@react-navigation/native';
+import {enableScreens} from 'react-native-screens';
 
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 
-import MainNavigation from './navigation/MainNavigation';
+import MainNavigation from './source/navigation/MainNavigation';
 
-import store from './store/store';
+import store from './source/store/store';
 
 enableScreens();
 
